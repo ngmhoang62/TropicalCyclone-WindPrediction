@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from cyclone_wind.data import TARGET, load_observations
-from cyclone_wind.features import attach_targets, feature_frame
+from src.data import TARGET, load_observations
+from src.features import attach_targets, feature_frame
 
 
 def observations(n=12):

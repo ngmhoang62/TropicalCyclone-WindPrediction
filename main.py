@@ -1,10 +1,6 @@
-"""Run the research code directly from this repository, without package installation."""
+"""Run the research from the repository root."""
 
-import importlib
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+from src.cli import main
 
 if __name__ == "__main__":
-    importlib.import_module("cyclone_wind.cli").main()
+    main()

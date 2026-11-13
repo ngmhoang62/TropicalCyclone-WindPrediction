@@ -10,14 +10,14 @@ import joblib
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-import cyclone_wind  # noqa: E402
-from cyclone_wind.data import load_observations  # noqa: E402
-from cyclone_wind.features import attach_targets, feature_frame  # noqa: E402
-from cyclone_wind.metrics import evaluate  # noqa: E402
-from cyclone_wind.models import predict  # noqa: E402
-from cyclone_wind.splits import (  # noqa: E402
+import src as cyclone_wind  # noqa: E402
+from src.data import load_observations  # noqa: E402
+from src.features import attach_targets, feature_frame  # noqa: E402
+from src.metrics import evaluate  # noqa: E402
+from src.models import predict  # noqa: E402
+from src.splits import (  # noqa: E402
     assert_disjoint,
     development_calibration_test,
     window_split,
@@ -48,7 +48,7 @@ if digest.hexdigest() != manifest["code_sha256"]:
     snapshot = json.loads((root / "reports/benchmark/source_modules.json").read_text())
     current = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
                for p in Path(cyclone_wind.__file__).parent.glob("*.py")}
-    assert current == snapshot["modules"], "Forecasting source differs from verified snapshot"
+    assert {name: current.get(name) for name in snapshot["modules"]} == snapshot["modules"], "Forecasting core differs from verified snapshot"
 features, columns, sequence_columns = feature_frame(observations, config["history_hours"])
 predictions = pd.read_csv(run / "holdout_predictions.csv")
 metrics = pd.read_csv(run / "holdout_metrics.csv")

@@ -34,8 +34,9 @@ for name in filter(None, names):
             errors.append(f"Private machine path: {name}")
     if path.suffix == ".ipynb":
         notebook = json.loads(path.read_text(encoding="utf-8"))
-        if any(c.get("outputs") or c.get("execution_count") is not None for c in notebook["cells"]):
-            errors.append(f"Notebook outputs not sanitized: {name}")
+        if any(o.get("output_type") == "error"
+               for c in notebook["cells"] for o in c.get("outputs", [])):
+            errors.append(f"Failed notebook execution: {name}")
 if errors:
     raise SystemExit("\n".join(errors))
 print(f"PASS: {len(list(filter(None, names)))} tracked files inspected")

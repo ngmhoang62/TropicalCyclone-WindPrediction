@@ -165,10 +165,12 @@ còn nhánh DL dùng chuỗi để dự đoán một quan sát sau đó.
 
 ## 11. Đọc code
 
-- **notebooks/modeling.ipynb:** notebook gốc đã bỏ output để nhớ lại cách làm ban đầu.
-- **src/cyclone_wind/:** pipeline hiện tại theo dữ liệu, features, chia tập, mô hình và đánh giá.
+- **notebooks/modeling.ipynb:** notebook nghiên cứu hiện tại; gọi hàm từ src, fit lại
+  mô hình đã chốt và đọc bảng/biểu đồ phân tích lỗi theo từng bước.
+- **src/:** pipeline hiện tại theo dữ liệu, features, chia tập, mô hình và đánh giá.
 - **configs/research.json:** cấu hình benchmark.
 - **reports/benchmark/:** kết quả tổng hợp và biểu đồ.
+- **reports/analysis/:** phân tích bổ sung từ notebook, không dùng để chọn lại mô hình.
 - **tests/:** kiểm thử target, leakage và lưu/nạp model.
 
 Dữ liệu gốc, model và prediction từng dòng chỉ giữ local. Khi đã cài package và

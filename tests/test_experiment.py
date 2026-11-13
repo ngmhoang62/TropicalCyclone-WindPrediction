@@ -3,7 +3,7 @@ import json
 import pandas as pd
 import pytest
 
-from cyclone_wind.experiment import run_experiment
+from src.experiment import run_experiment
 
 
 def test_small_research_run_and_saved_inference(tmp_path):

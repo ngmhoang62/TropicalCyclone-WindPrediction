@@ -7,3 +7,6 @@ matplotlib
 torch
 pytest
 ruff
+nbformat
+nbclient
+ipykernel
