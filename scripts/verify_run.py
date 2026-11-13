@@ -3,18 +3,21 @@
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import joblib
 import numpy as np
 import pandas as pd
 
-import cyclone_wind
-from cyclone_wind.data import load_observations
-from cyclone_wind.features import attach_targets, feature_frame
-from cyclone_wind.metrics import evaluate
-from cyclone_wind.models import predict
-from cyclone_wind.splits import (
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+import cyclone_wind  # noqa: E402
+from cyclone_wind.data import load_observations  # noqa: E402
+from cyclone_wind.features import attach_targets, feature_frame  # noqa: E402
+from cyclone_wind.metrics import evaluate  # noqa: E402
+from cyclone_wind.models import predict  # noqa: E402
+from cyclone_wind.splits import (  # noqa: E402
     assert_disjoint,
     development_calibration_test,
     window_split,

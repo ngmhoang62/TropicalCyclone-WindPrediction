@@ -174,7 +174,7 @@ còn nhánh DL dùng chuỗi để dự đoán một quan sát sau đó.
 Dữ liệu gốc, model và prediction từng dòng chỉ giữ local. Khi đã cài package và
 chuẩn bị CSV, có thể chạy:
 
-    python -m cyclone_wind train --data data/raw/dataset.csv --config configs/research.json --output reports/runs/new-run --evaluate-holdout
+    python main.py train --data data/raw/dataset.csv --config configs/research.json --output reports/runs/new-run --evaluate-holdout
 
 Benchmark đã công bố được giữ nguyên. Đợt dọn cấu trúc này không phải một lần
 huấn luyện mới. Dự án có kỹ thuật chuyển sang nghiên cứu time series khác,

@@ -7,4 +7,3 @@ matplotlib
 torch
 pytest
 ruff
-build
