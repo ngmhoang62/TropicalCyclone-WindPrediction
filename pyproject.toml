@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tropical-cyclone-wind-prediction"
+version = "0.1.0"
+description = "Reproducible, leakage-aware multi-horizon cyclone wind forecasting research."
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26,<3", "pandas>=2.2,<4", "scikit-learn>=1.5,<2",
+  "scipy>=1.12,<2", "joblib>=1.3,<2", "matplotlib>=3.8,<4"
+]
+
+[project.optional-dependencies]
+deep = ["torch>=2.3,<3"]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1", "build>=1,<2"]
+
+[project.scripts]
+cyclone-wind = "cyclone_wind.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "run_id": "research-v1",
+  "input_sha256": "c3c861092450b9494f27322e9857742ef00c19dcca20136b44566af33f7834e4",
+  "code_sha256": "e758d677e9b2faa1cdc9913746ee68e5d29ade2ec30cd41420cf15743e0d98ac",
+  "horizons_verified": [
+    6,
+    12,
+    24
+  ],
+  "prediction_rows_verified": 12509,
+  "checks": [
+    "input bytes",
+    "locked protocol consistency",
+    "source digest",
+    "storm disjointness",
+    "chronological label/history boundaries",
+    "all development folds",
+    "common holdout origin/target pairs",
+    "metrics recomputed",
+    "empirical interval coverage recomputed",
+    "champion selected using development only",
+    "saved model inference replay"
+  ],
+  "source_revision": "Forecasting module hashes recorded in benchmark/source_modules.json"
+}

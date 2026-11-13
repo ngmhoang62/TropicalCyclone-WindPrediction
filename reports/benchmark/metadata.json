@@ -1,0 +1,323 @@
+{
+  "run_id": "research-v1",
+  "started_at_utc": "2026-11-13T11:25:57.728817+00:00",
+  "status": "COMPLETE",
+  "config": {
+    "seed": 42,
+    "horizons_hours": [
+      6,
+      12,
+      24
+    ],
+    "history_hours": [
+      0,
+      6,
+      12,
+      18
+    ],
+    "development_end": "2019-01-01",
+    "calibration_end": "2022-01-01",
+    "validation_windows": [
+      [
+        "2004-01-01",
+        "2009-01-01"
+      ],
+      [
+        "2009-01-01",
+        "2014-01-01"
+      ],
+      [
+        "2014-01-01",
+        "2019-01-01"
+      ]
+    ],
+    "models": [
+      "persistence",
+      "trend",
+      "elasticnet",
+      "random_forest",
+      "hist_gradient_boosting",
+      "torch_mlp",
+      "torch_lstm"
+    ],
+    "search_trials": 4,
+    "bootstrap_repetitions": 500,
+    "prediction_interval_alpha": 0.1,
+    "extreme_wind_threshold_mps": 33.0,
+    "torch_epochs": 35,
+    "n_jobs": 2
+  },
+  "code_sha256": "e758d677e9b2faa1cdc9913746ee68e5d29ade2ec30cd41420cf15743e0d98ac",
+  "config_sha256": "98a4d90d13a7cfcf12fd95940c13e8b2710de6d3d1aa7bc5a42b2c4a7fb8e4a3",
+  "data_audit": {
+    "input_sha256": "c3c861092450b9494f27322e9857742ef00c19dcca20136b44566af33f7834e4",
+    "input_rows": 16485,
+    "original_columns": 56,
+    "removed_equivalent_observations": 1111,
+    "conflicting_keys": 3,
+    "conflicting_rows_removed": 6,
+    "invalid_rows_removed": 0,
+    "clean_rows": 15368,
+    "storms": 563,
+    "time_min": "1980-03-18 00:00:00+00:00",
+    "time_max": "2025-11-13 12:00:00+00:00",
+    "gap_hours_counts": {
+      "6.0": 14708,
+      "3.0": 71,
+      "12.0": 15,
+      "18.0": 3,
+      "17550.0": 1,
+      "4.0": 1,
+      "2.0": 1,
+      "72.0": 1,
+      "48.0": 1,
+      "24.0": 1,
+      "678.0": 1,
+      "30.0": 1
+    },
+    "missing_by_column": {
+      "storm_id": 0,
+      "pt_windSpeedMPS": 0,
+      "pt_lat": 0,
+      "pt_lon": 0,
+      "pt_pressureMB": 9522,
+      "pt_moveSpeedMPS": 475,
+      "pt_moveDirectionDEG": 489,
+      "ERA5_u_850": 28,
+      "ERA5_v_850": 28,
+      "ERA5_z_850": 28,
+      "ERA5_r_850": 28,
+      "ERA5_w_850": 28,
+      "ERA5_vo_850": 28,
+      "ERA5_u_500": 28,
+      "ERA5_v_500": 28,
+      "ERA5_z_500": 28,
+      "ERA5_r_500": 28,
+      "ERA5_w_500": 28,
+      "ERA5_vo_500": 28,
+      "ERA5_u_200": 28,
+      "ERA5_v_200": 28,
+      "ERA5_z_200": 28,
+      "ERA5_r_200": 28,
+      "ERA5_w_200": 28,
+      "ERA5_vo_200": 28,
+      "ERA5_SST": 2194,
+      "ERA5_MSLP": 28,
+      "ERA5_TCWV": 28,
+      "ERA5_CAPE": 28,
+      "timestamp": 0
+    },
+    "excluded_columns": [
+      "pr_basinOrigin",
+      "pr_basins",
+      "pr_boundingMaxLat",
+      "pr_boundingMaxLon",
+      "pr_boundingMinLat",
+      "pr_boundingMinLon",
+      "pr_endISO",
+      "pr_event",
+      "pr_isActive",
+      "pr_maxStormCat",
+      "pr_maxStormName",
+      "pr_maxStormType",
+      "pr_name",
+      "pr_pressureMinISO",
+      "pr_pressureMinMB",
+      "pr_startISO",
+      "pr_tz",
+      "pr_windMaxISO",
+      "pr_windMaxMPS",
+      "pr_year",
+      "pt_details_basin",
+      "pt_index",
+      "pt_move_dir",
+      "pt_stormCat",
+      "pt_stormType",
+      "pt_type"
+    ],
+    "availability_caveat": "ERA5 reanalysis is retrospective; as-of-time availability is unverified."
+  },
+  "features": [
+    "pt_windSpeedMPS",
+    "pt_lat",
+    "pt_lon",
+    "pt_pressureMB",
+    "pt_moveSpeedMPS",
+    "pt_moveDirectionDEG",
+    "ERA5_u_850",
+    "ERA5_v_850",
+    "ERA5_z_850",
+    "ERA5_r_850",
+    "ERA5_w_850",
+    "ERA5_vo_850",
+    "ERA5_u_500",
+    "ERA5_v_500",
+    "ERA5_z_500",
+    "ERA5_r_500",
+    "ERA5_w_500",
+    "ERA5_vo_500",
+    "ERA5_u_200",
+    "ERA5_v_200",
+    "ERA5_z_200",
+    "ERA5_r_200",
+    "ERA5_w_200",
+    "ERA5_vo_200",
+    "ERA5_SST",
+    "ERA5_MSLP",
+    "ERA5_TCWV",
+    "ERA5_CAPE",
+    "seq_pt_windSpeedMPS_lag0",
+    "seq_pt_pressureMB_lag0",
+    "seq_pt_lat_lag0",
+    "seq_pt_lon_lag0",
+    "seq_ERA5_MSLP_lag0",
+    "seq_ERA5_u_850_lag0",
+    "seq_ERA5_v_850_lag0",
+    "seq_pt_windSpeedMPS_lag6",
+    "seq_pt_pressureMB_lag6",
+    "seq_pt_lat_lag6",
+    "seq_pt_lon_lag6",
+    "seq_ERA5_MSLP_lag6",
+    "seq_ERA5_u_850_lag6",
+    "seq_ERA5_v_850_lag6",
+    "seq_pt_windSpeedMPS_lag12",
+    "seq_pt_pressureMB_lag12",
+    "seq_pt_lat_lag12",
+    "seq_pt_lon_lag12",
+    "seq_ERA5_MSLP_lag12",
+    "seq_ERA5_u_850_lag12",
+    "seq_ERA5_v_850_lag12",
+    "seq_pt_windSpeedMPS_lag18",
+    "seq_pt_pressureMB_lag18",
+    "seq_pt_lat_lag18",
+    "seq_pt_lon_lag18",
+    "seq_ERA5_MSLP_lag18",
+    "seq_ERA5_u_850_lag18",
+    "seq_ERA5_v_850_lag18",
+    "wind_change_6h",
+    "wind_history_mean",
+    "wind_history_std",
+    "wind_magnitude_850",
+    "wind_magnitude_500",
+    "wind_magnitude_200",
+    "wind_shear_850_200",
+    "hour_sin",
+    "hour_cos",
+    "month_sin",
+    "month_cos",
+    "longitude_sin",
+    "longitude_cos"
+  ],
+  "sequence_features": [
+    "seq_pt_windSpeedMPS_lag0",
+    "seq_pt_pressureMB_lag0",
+    "seq_pt_lat_lag0",
+    "seq_pt_lon_lag0",
+    "seq_ERA5_MSLP_lag0",
+    "seq_ERA5_u_850_lag0",
+    "seq_ERA5_v_850_lag0",
+    "seq_pt_windSpeedMPS_lag6",
+    "seq_pt_pressureMB_lag6",
+    "seq_pt_lat_lag6",
+    "seq_pt_lon_lag6",
+    "seq_ERA5_MSLP_lag6",
+    "seq_ERA5_u_850_lag6",
+    "seq_ERA5_v_850_lag6",
+    "seq_pt_windSpeedMPS_lag12",
+    "seq_pt_pressureMB_lag12",
+    "seq_pt_lat_lag12",
+    "seq_pt_lon_lag12",
+    "seq_ERA5_MSLP_lag12",
+    "seq_ERA5_u_850_lag12",
+    "seq_ERA5_v_850_lag12",
+    "seq_pt_windSpeedMPS_lag18",
+    "seq_pt_pressureMB_lag18",
+    "seq_pt_lat_lag18",
+    "seq_pt_lon_lag18",
+    "seq_ERA5_MSLP_lag18",
+    "seq_ERA5_u_850_lag18",
+    "seq_ERA5_v_850_lag18"
+  ],
+  "evaluate_holdout": true,
+  "environment": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26300-SP0"
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0",
+    "torch": "2.15.0+cpu",
+    "fastapi": "0.162.5"
+  },
+  "partitions": {
+    "6": {
+      "development": {
+        "rows": 11849,
+        "storms": 476,
+        "origin_min": "1980-03-18 18:00:00+00:00",
+        "origin_max": "2018-12-29 21:00:00+00:00"
+      },
+      "calibration": {
+        "rows": 536,
+        "storms": 34,
+        "origin_min": "2019-03-15 18:00:00+00:00",
+        "origin_max": "2021-12-20 00:00:00+00:00"
+      },
+      "test": {
+        "rows": 643,
+        "storms": 38,
+        "origin_min": "2022-06-30 12:00:00+00:00",
+        "origin_max": "2025-11-13 06:00:00+00:00"
+      }
+    },
+    "12": {
+      "development": {
+        "rows": 11371,
+        "storms": 475,
+        "origin_min": "1980-03-18 18:00:00+00:00",
+        "origin_max": "2018-12-29 15:00:00+00:00"
+      },
+      "calibration": {
+        "rows": 502,
+        "storms": 32,
+        "origin_min": "2019-03-15 18:00:00+00:00",
+        "origin_max": "2021-12-20 06:00:00+00:00"
+      },
+      "test": {
+        "rows": 606,
+        "storms": 36,
+        "origin_min": "2022-06-30 12:00:00+00:00",
+        "origin_max": "2025-11-13 00:00:00+00:00"
+      }
+    },
+    "24": {
+      "development": {
+        "rows": 10419,
+        "storms": 468,
+        "origin_min": "1980-03-18 18:00:00+00:00",
+        "origin_max": "2018-12-29 03:00:00+00:00"
+      },
+      "calibration": {
+        "rows": 444,
+        "storms": 28,
+        "origin_min": "2019-03-15 18:00:00+00:00",
+        "origin_max": "2021-12-19 18:00:00+00:00"
+      },
+      "test": {
+        "rows": 538,
+        "storms": 36,
+        "origin_min": "2022-06-30 12:00:00+00:00",
+        "origin_max": "2025-11-12 12:00:00+00:00"
+      }
+    }
+  },
+  "champions": {
+    "6": "hist_gradient_boosting",
+    "12": "hist_gradient_boosting",
+    "24": "hist_gradient_boosting"
+  },
+  "completed_at_utc": "2026-11-13T11:44:54.386874+00:00"
+}

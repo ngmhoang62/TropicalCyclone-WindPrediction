@@ -1,0 +1,16 @@
+{
+  "note": "Forecasting modules captured before optional API removal; original benchmark digest retained.",
+  "modules": {
+    "cli.py": "ec5f4a05d0a6d16409b615c3d167a2128a172d082c90c9786fc305852c338327",
+    "data.py": "022af059df982efdf3487090fa33a2f953adb5aa37b8eafbc339012f236db3bc",
+    "experiment.py": "86427efd0900a092c254fe35fe0a8232fa7ede057577242c88c43dd093eae86b",
+    "features.py": "c6c054d6c17a5614d544ce55cb44629273cb373257958ae85d0f538c273e80c2",
+    "metrics.py": "285bbd39a186fc73a8b8ae97a90c425f7ace88dbe35375e100e7d5f8cb6d96cd",
+    "models.py": "2a8d764146192c296dd762c0ec804a9fbd97dc2d70bcf22fa560dd9f2f2796ff",
+    "reporting.py": "6b3eb33e01c6b8b4568c43c2a086f567f803ac81a2fbae17c666b113636067b2",
+    "splits.py": "f5c2b9dfea72342152f056acb2c4e1d7b7680e6807f9eebb587f9b8620a2f2c3",
+    "torch_models.py": "385ab06cd5012567dc94e1e60a4e5735a7b57fa6e6b69eaeb80e7c25d2012be2",
+    "__init__.py": "6134fee865eaec36efc44a5fb2472ac71abd4f25bc528f859092b37b50ea6348",
+    "__main__.py": "3129adff95e0f38b87ab34cddfc27082c7892bcaec267ff5d40f160fdf55b44a"
+  }
+}

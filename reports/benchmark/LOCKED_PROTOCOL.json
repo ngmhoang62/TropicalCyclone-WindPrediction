@@ -1,0 +1,51 @@
+{
+  "config": {
+    "seed": 42,
+    "horizons_hours": [
+      6,
+      12,
+      24
+    ],
+    "history_hours": [
+      0,
+      6,
+      12,
+      18
+    ],
+    "development_end": "2019-01-01",
+    "calibration_end": "2022-01-01",
+    "validation_windows": [
+      [
+        "2004-01-01",
+        "2009-01-01"
+      ],
+      [
+        "2009-01-01",
+        "2014-01-01"
+      ],
+      [
+        "2014-01-01",
+        "2019-01-01"
+      ]
+    ],
+    "models": [
+      "persistence",
+      "trend",
+      "elasticnet",
+      "random_forest",
+      "hist_gradient_boosting",
+      "torch_mlp",
+      "torch_lstm"
+    ],
+    "search_trials": 4,
+    "bootstrap_repetitions": 500,
+    "prediction_interval_alpha": 0.1,
+    "extreme_wind_threshold_mps": 33.0,
+    "torch_epochs": 35,
+    "n_jobs": 2
+  },
+  "data_sha256": "c3c861092450b9494f27322e9857742ef00c19dcca20136b44566af33f7834e4",
+  "code_sha256": "e758d677e9b2faa1cdc9913746ee68e5d29ade2ec30cd41420cf15743e0d98ac",
+  "holdout_enabled": true,
+  "selection_metric": "unweighted mean MAE over calendar validation windows"
+}

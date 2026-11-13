@@ -1,0 +1,22 @@
+horizon_hours,model,cv_mae_mps,parameters,is_champion
+6,persistence,2.501606300221488,{},False
+6,trend,2.3927404220488424,{},False
+6,elasticnet,2.0353253204062365,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",False
+6,random_forest,2.0492306708997736,"{""max_depth"": null, ""max_features"": 0.7, ""min_samples_leaf"": 8, ""n_estimators"": 150}",False
+6,hist_gradient_boosting,1.943831210489927,"{""l2_regularization"": 5.0, ""learning_rate"": 0.08, ""max_iter"": 180, ""max_leaf_nodes"": 15}",True
+6,torch_mlp,2.227614567115593,"{""hidden_size"": 64}",False
+6,torch_lstm,2.0804588853708577,"{""hidden_size"": 32}",False
+12,persistence,4.735094946480173,{},False
+12,trend,4.708983909153987,{},False
+12,elasticnet,3.5403468631017496,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",False
+12,random_forest,3.3582653744353337,"{""max_depth"": null, ""max_features"": 0.7, ""min_samples_leaf"": 8, ""n_estimators"": 150}",False
+12,hist_gradient_boosting,3.148619199631769,"{""l2_regularization"": 5.0, ""learning_rate"": 0.08, ""max_iter"": 180, ""max_leaf_nodes"": 15}",True
+12,torch_mlp,3.7681161701577888,"{""hidden_size"": 64}",False
+12,torch_lstm,3.5666243953971946,"{""hidden_size"": 32}",False
+24,persistence,8.472282522686273,{},False
+24,trend,9.511635482260907,{},False
+24,elasticnet,6.3048050452909195,"{""alpha"": 0.01, ""l1_ratio"": 0.5}",False
+24,random_forest,5.610060776322201,"{""max_depth"": null, ""max_features"": 0.7, ""min_samples_leaf"": 8, ""n_estimators"": 150}",False
+24,hist_gradient_boosting,5.286670227876491,"{""l2_regularization"": 5.0, ""learning_rate"": 0.08, ""max_iter"": 180, ""max_leaf_nodes"": 15}",True
+24,torch_mlp,6.451099947630013,"{""hidden_size"": 64}",False
+24,torch_lstm,6.333108754981438,"{""hidden_size"": 32}",False

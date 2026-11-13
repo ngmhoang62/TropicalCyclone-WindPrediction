@@ -1,0 +1,7 @@
+horizon_hours,model,ablation,cv_mae_mps,delta_vs_full_mps
+6,hist_gradient_boosting,without_era5,2.000389856964206,0.056558646474279106
+6,hist_gradient_boosting,without_past_lags,2.082913992698369,0.13908278220844195
+12,hist_gradient_boosting,without_era5,3.2222137210754926,0.07359452144372369
+12,hist_gradient_boosting,without_past_lags,3.3833292306895806,0.23471003105781163
+24,hist_gradient_boosting,without_era5,5.533137495622847,0.24646726774635574
+24,hist_gradient_boosting,without_past_lags,5.6159005142818,0.32923028640530916

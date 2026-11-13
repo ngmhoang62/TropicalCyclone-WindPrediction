@@ -1,0 +1,34 @@
+# Local environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.test-tmp*/
+install.log
+reports/*console.log
+reports/local-*.json
+*.egg-info/
+build/
+dist/
+.env
+.env.*
+!.env.example
+# Source observations and learned weights are not redistributed by default.
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+reports/runs/
+*.pkl
+*.joblib
+*.keras
+*.pt
+*.onnx
+# Legacy notebook outputs may contain private paths and are sanitized before publication.
+.ipynb_checkpoints/
+archive/original_reports/*
+!archive/original_reports/README.md
+data/research-v1/
