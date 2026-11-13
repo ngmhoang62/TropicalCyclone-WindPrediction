@@ -1,0 +1,10 @@
+numpy
+pandas
+scikit-learn
+scipy
+joblib
+matplotlib
+torch
+pytest
+ruff
+build

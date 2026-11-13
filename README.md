@@ -153,8 +153,8 @@ Kết quả vì vậy chưa chứng minh được chất lượng dự báo th�
 ## 10. Bản ban đầu và bản hiện tại khác nhau thế nào?
 
 **Ban đầu:** notebook thực nghiệm với các mô hình ML và TensorFlow/Keras.
-Thu thập dữ liệu, preprocessing, feature engineering và demo là những phần được
-chia trong nhóm; không xem toàn bộ dự án là đóng góp độc lập của một người.
+Đồ án gốc được trình bày là dự án nhóm 5 thành viên. Phần lớn code được thực hiện
+bởi người phát triển repo này; phân công thuyết trình không phản ánh đầy đủ đóng góp code.
 
 **Phần mở rộng hiện tại:** tổ chức pipeline, căn lại target tương lai, thêm
 walk-forward validation, baseline, PyTorch, ablation và kiểm chứng kết quả.
